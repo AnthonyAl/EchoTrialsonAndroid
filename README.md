@@ -122,27 +122,11 @@ All application code lives under:
 
 ---
 
-## Screenshots & media
-
-Place repository images in a `docs/` folder (paths referenced above):
-
-| File | Description |
-|------|-------------|
-| `docs/demo.gif` | Short gameplay capture *(to be added)* |
-| `docs/screenshot-menu.png` | Main menu |
-| `docs/screenshot-gameplay.png` | In-level view |
-
-These paths are whitelisted in `.gitignore` so README assets can be committed without pulling in game binaries.
-
----
-
 ## Related publication
 
 The formal thesis document, UML diagrams, XML schema specification, and performance analysis are **published separately** from this repository. Use this repo to **read the implementation** that those chapters refer to.
 
-When linking this repository in a paper or citation, prefer the GitHub URL and note that it is **source-only** (no bundled media or Firebase credentials).
-
-> **Paper / DOI link:** *(add your published reference here)*
+> **Paper / DOI link:** *https://dione.lib.unipi.gr/xmlui/handle/unipi/18316*
 
 ---
 
@@ -161,7 +145,7 @@ Dependencies are declared in `app/build.gradle.kts` (Firebase BoM, Play Services
 
 ## License
 
-Source will be released under an permissive license (e.g. **MIT**) on GitHub — configure `LICENSE` in the repository settings when you publish.
+Source code is released under a general public license **MIT**. 
 
 ---
 
