@@ -1,11 +1,7 @@
-# Echo Trials on Android
+# Echo Trials on Android (Automated README)
 
 ![Gameplay demo](docs/demo.gif)
 
-<p align="center">
-  <img src="docs/screenshot-menu.png" alt="Main menu" width="504" />
-  <img src="docs/screenshot-gameplay.png" alt="Gameplay" width="504" />
-</p>
 
 > **Academic source repository** — companion code for the thesis *Echo Trials on Android*: a custom 2D platformer and level-creation platform written in **pure Java** for Android, without a commercial game engine.
 
@@ -17,7 +13,12 @@ A future commercial-style release is planned on a proper game engine; this codeb
 
 ## What is Echo Trials?
 
-**Echo Trials** is a landscape 2D platformer inspired by the Spanish indie game [*Level Devil*](https://store.steampowered.com/app/2384730/Level_Devil/), extended into a broader creative platform:
+<p align="center">
+  <img src="docs/screenshot-menu.png" alt="Main menu" width="504" />
+  <img src="docs/screenshot-gameplay.png" alt="Gameplay" width="504" />
+</p>
+
+**Echo Trials** is a landscape 2D platformer inspired by the Spanish indie game *Level Devil*, extended into a broader creative platform:
 
 - **Challenge Trials** — curated official levels grouped into themed sections (Pits, Spikes, Push, Gravity, Movement), each teaching specific mechanics through progressive difficulty.
 - **Community Trials** — browse, favourite, and share user-created levels through a cloud-backed catalogue.
