@@ -1,0 +1,692 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Top Toolbar -->
+
+    <!-- Grid View Container -->
+
+    <!-- Bottom Palette -->
+
+    <com.unipi.alexandris.android.echotrialsonandroid.levelcreator.LevelGridView
+        android:id="@+id/gridView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="@+id/paletteScroll"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/topToolbar"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/toolbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#333333"
+        android:backgroundTint="#7E402000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/paletteScroll">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/imageButton"
+                android:layout_width="18dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="#00FFFFFF"
+                android:scaleType="centerInside"
+                android:visibility="visible"
+                app:srcCompat="@drawable/ui_forward" />
+
+            <LinearLayout
+                android:id="@+id/linearLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="95dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/deleteButtonContainer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginRight="8dp"
+                    android:gravity="center|left"
+                    android:orientation="horizontal"
+                    android:visibility="visible">
+
+                    <ImageButton
+                        android:id="@+id/btnDelete"
+                        android:layout_width="31.5dp"
+                        android:layout_height="31.5dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="8dp"
+                        android:background="#00FFFFFF"
+                        android:scaleType="centerInside"
+                        app:srcCompat="@drawable/ui_delete" />
+
+                    <TextView
+                        android:id="@+id/textView2"
+                        style="@style/ButtonTextStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:alpha="0.95"
+                        android:fontFamily="@font/aclonica"
+                        android:lineSpacingExtra="8sp"
+                        android:text="@string/btn_delete"
+                        android:textAlignment="center"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#481F19"
+                        android:textSize="11sp"
+                        android:typeface="sans" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/swipeButtonContainer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
+                    android:gravity="center|left"
+                    android:orientation="horizontal"
+                    android:visibility="visible">
+
+                    <ImageButton
+                        android:id="@+id/btnSlide"
+                        android:layout_width="31.5dp"
+                        android:layout_height="31.5dp"
+                        android:layout_marginLeft="8dp"
+                        android:background="#00FFFFFF"
+                        android:scaleType="centerInside"
+                        app:srcCompat="@drawable/ui_swipe" />
+
+                    <TextView
+                        style="@style/ButtonTextStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="3dp"
+                        android:layout_marginTop="2dp"
+                        android:alpha="0.95"
+                        android:fontFamily="@font/aclonica"
+                        android:lineSpacingExtra="8sp"
+                        android:text="@string/btn_slide"
+                        android:textAlignment="center"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#481F19"
+                        android:textSize="11sp"
+                        android:typeface="sans" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/selectButtonContainer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:gravity="center|left"
+                    android:orientation="horizontal"
+                    android:visibility="visible">
+
+                    <ImageButton
+                        android:id="@+id/btnSelectMode"
+                        android:layout_width="31.5dp"
+                        android:layout_height="31.5dp"
+                        android:layout_marginLeft="8dp"
+                        android:background="#00FFFFFF"
+                        android:scaleType="centerInside"
+                        app:srcCompat="@drawable/ui_select" />
+
+                    <TextView
+                        style="@style/ButtonTextStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:alpha="0.95"
+                        android:fontFamily="@font/aclonica"
+                        android:lineSpacingExtra="8sp"
+                        android:text="@string/btn_select"
+                        android:textAlignment="center"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#481F19"
+                        android:textSize="11sp"
+                        android:typeface="sans" />
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/topToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#333333"
+        android:backgroundTint="#7E402000"
+        android:padding="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:id="@+id/toolbarLeft"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:id="@+id/undoButtonContainer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:id="@+id/undoButton"
+                    android:layout_width="37dp"
+                    android:layout_height="37dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginTop="8dp"
+                    android:background="#00FFFFFF"
+                    android:padding="2dp"
+                    android:scaleType="centerInside"
+                    app:srcCompat="@drawable/ui_undo" />
+
+                <TextView
+                    android:id="@+id/undoText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:fontFamily="@font/aclonica"
+                    android:lineSpacingExtra="8sp"
+                    android:text="@string/btn_undo"
+                    android:textAlignment="center"
+                    android:textColor="#481F19"
+                    android:textSize="11sp"
+                    android:textStyle="bold"
+                    android:typeface="sans" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/redoButtonContainer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:id="@+id/redoButton"
+                    android:layout_width="37dp"
+                    android:layout_height="37dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginTop="8dp"
+                    android:background="#00FFFFFF"
+                    android:padding="2dp"
+                    android:scaleType="centerInside"
+                    app:srcCompat="@drawable/ui_redo" />
+
+                <TextView
+                    android:id="@+id/redoText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:fontFamily="@font/aclonica"
+                    android:lineSpacingExtra="8sp"
+                    android:text="@string/btn_redo"
+                    android:textAlignment="center"
+                    android:textColor="#481F19"
+                    android:textSize="11sp"
+                    android:textStyle="bold"
+                    android:typeface="sans" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/clearButtonContainer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <ImageButton
+                    android:id="@+id/btnClear"
+                    android:layout_width="37dp"
+                    android:layout_height="37dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginTop="8dp"
+                    android:background="#00FFFFFF"
+                    android:padding="2dp"
+                    android:scaleType="centerInside"
+                    app:srcCompat="@drawable/ui_clear" />
+
+                <TextView
+                    android:id="@+id/textView3"
+                    style="@style/ButtonTextStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:alpha="0.95"
+                    android:fontFamily="@font/aclonica"
+                    android:lineSpacingExtra="8sp"
+                    android:text="@string/btn_clear"
+                    android:textAlignment="center"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                    android:textColor="#481F19"
+                    android:textSize="11sp"
+                    android:typeface="sans" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/propertiesButtonContainer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <ImageButton
+                    android:id="@+id/btnProperties"
+                    android:layout_width="37dp"
+                    android:layout_height="37dp"
+                    android:layout_marginTop="8dp"
+                    android:alpha="0.4"
+                    android:background="#00FFFFFF"
+                    android:enabled="false"
+                    android:padding="2dp"
+                    android:scaleType="centerInside"
+                    app:srcCompat="@drawable/ui_edit" />
+
+                <TextView
+                    style="@style/ButtonTextStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:alpha="0.95"
+                    android:fontFamily="@font/aclonica"
+                    android:lineSpacingExtra="8sp"
+                    android:text="@string/btn_edit"
+                    android:textAlignment="center"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                    android:textColor="#481F19"
+                    android:textSize="11sp"
+                    android:typeface="sans" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/copyButtonContainer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <ImageButton
+                    android:id="@+id/btnCopy"
+                    android:layout_width="37dp"
+                    android:layout_height="37dp"
+                    android:layout_marginTop="8dp"
+                    android:background="#00FFFFFF"
+                    android:padding="2dp"
+                    android:scaleType="centerInside"
+                    app:srcCompat="@drawable/ui_copy" />
+
+                <TextView
+                    style="@style/ButtonTextStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:alpha="0.95"
+                    android:fontFamily="@font/aclonica"
+                    android:lineSpacingExtra="8sp"
+                    android:text="@string/btn_copy"
+                    android:textAlignment="center"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                    android:textColor="#481F19"
+                    android:textSize="11sp"
+                    android:typeface="sans" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/pasteButtonContainer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <ImageButton
+                    android:id="@+id/btnPaste"
+                    android:layout_width="37dp"
+                    android:layout_height="37dp"
+                    android:layout_marginTop="8dp"
+                    android:alpha="0.4"
+                    android:background="#00FFFFFF"
+                    android:enabled="false"
+                    android:padding="2dp"
+                    android:scaleType="centerInside"
+                    app:srcCompat="@drawable/ui_paste" />
+
+                <TextView
+                    style="@style/ButtonTextStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:alpha="0.95"
+                    android:fontFamily="@font/aclonica"
+                    android:lineSpacingExtra="8sp"
+                    android:text="@string/btn_paste"
+                    android:textAlignment="center"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                    android:textColor="#481F19"
+                    android:textSize="11sp"
+                    android:typeface="sans" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/toolBarRight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:id="@+id/saveButtonContainer"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="8dp"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <ImageButton
+                    android:id="@+id/btnSave"
+                    android:layout_width="37dp"
+                    android:layout_height="37dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginTop="8dp"
+                    android:background="#00FFFFFF"
+                    android:padding="2dp"
+                    android:scaleType="centerInside"
+                    app:srcCompat="@drawable/ui_save" />
+
+                <TextView
+                    android:id="@+id/textView5"
+                    style="@style/ButtonTextStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:alpha="0.95"
+                    android:fontFamily="@font/aclonica"
+                    android:lineSpacingExtra="8sp"
+                    android:text="@string/btn_save"
+                    android:textAlignment="center"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                    android:textColor="#481F19"
+                    android:textSize="11sp"
+                    android:typeface="sans" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/cancelButtonContainer"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="8dp"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <ImageButton
+                    android:id="@+id/btnCancel"
+                    android:layout_width="37dp"
+                    android:layout_height="37dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginTop="8dp"
+                    android:background="#00FFFFFF"
+                    android:padding="2dp"
+                    android:scaleType="centerInside"
+                    app:srcCompat="@drawable/ui_back" />
+
+                <TextView
+                    android:id="@+id/textView4"
+                    style="@style/ButtonTextStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:alpha="0.95"
+                    android:fontFamily="@font/aclonica"
+                    android:lineSpacingExtra="8sp"
+                    android:text="@string/btn_cancel"
+                    android:textAlignment="center"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                    android:textColor="#481F19"
+                    android:textSize="11sp"
+                    android:typeface="sans" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/loadButtonContainer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <ImageButton
+                    android:id="@+id/btnLoad"
+                    android:layout_width="37dp"
+                    android:layout_height="37dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginTop="8dp"
+                    android:background="#00FFFFFF"
+                    android:padding="2dp"
+                    android:scaleType="centerInside"
+                    app:srcCompat="@drawable/ui_load" />
+
+                <TextView
+                    android:id="@+id/textView6"
+                    style="@style/ButtonTextStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:alpha="0.95"
+                    android:fontFamily="@font/aclonica"
+                    android:lineSpacingExtra="8sp"
+                    android:text="@string/btn_load"
+                    android:textAlignment="center"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                    android:textColor="#481F19"
+                    android:textSize="11sp"
+                    android:typeface="sans" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/tintButtonContainer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:id="@+id/btnTint"
+                    android:layout_width="37dp"
+                    android:layout_height="37dp"
+                    android:layout_marginTop="8dp"
+                    android:background="#00FFFFFF"
+                    android:padding="2dp"
+                    android:scaleType="centerInside"
+                    app:srcCompat="@drawable/ui_color" />
+
+                <TextView
+                    style="@style/ButtonTextStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:alpha="0.95"
+                    android:fontFamily="@font/aclonica"
+                    android:lineSpacingExtra="8sp"
+                    android:text="@string/btn_color"
+                    android:textAlignment="center"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                    android:textColor="#481F19"
+                    android:textSize="11sp"
+                    android:typeface="sans" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <HorizontalScrollView
+        android:id="@+id/paletteScroll"
+        android:layout_width="274dp"
+        android:layout_height="95dp"
+        android:layout_marginStart="82dp"
+        android:background="#333333"
+        android:backgroundTint="#7E402000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHeight_percent="0.3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/topToolbar"
+        app:layout_constraintVertical_bias="1.0">
+
+        <GridLayout
+            android:id="@+id/paletteTray"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:alignmentMode="alignMargins"
+            android:columnCount="10"
+            android:columnOrderPreserved="true"
+            android:fadingEdge="horizontal"
+            android:horizontalSpacing="4dp"
+            android:padding="4dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:rowCount="2"
+            android:useDefaultMargins="true"
+            android:verticalSpacing="4dp" />
+
+    </HorizontalScrollView>
+
+    <com.unipi.alexandris.android.echotrialsonandroid.levelcreator.GroupSelector
+        android:id="@+id/groupSelector"
+        android:layout_width="45dp"
+        android:layout_height="95dp"
+        android:translationX="10dp"
+        app:arrowBoxHeight="29dp"
+        app:arrowBoxWidth="29dp"
+        app:arrowPadding="4dp"
+        app:arrowScaleType="centerInside"
+        app:downArrowDrawable="@drawable/ui_down"
+        app:groupFontFamily="@font/aclonica"
+        app:groupTextAlignment="center"
+        app:groupTextColor="#481F19"
+        app:groupTextSize="11sp"
+        app:groupTextStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:textBackgroundColor="@android:color/transparent"
+        app:upArrowDrawable="@drawable/ui_up" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/toolBar"
+        android:layout_width="wrap_content"
+        android:layout_height="95dp"
+        android:background="#333333"
+        android:backgroundTint="#7E402000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/paletteScroll">
+
+        <ImageButton
+            android:id="@+id/imageButton2"
+            android:layout_width="18dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#00FFFFFF"
+            android:scaleType="centerInside"
+            android:visibility="visible"
+            app:srcCompat="@drawable/ui_back" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/selectedItemsText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:layout_marginEnd="13dp"
+        android:fontFamily="@font/aclonica"
+        android:lineSpacingExtra="8sp"
+        android:text="Selected: -"
+        android:textAlignment="center"
+        android:textColor="#481F19"
+        android:textSize="10sp"
+        android:textStyle="bold|italic"
+        android:typeface="sans"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/topToolbar" />
+
+    <TextView
+        android:id="@+id/objectLimitText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="13dp"
+        android:layout_marginTop="3dp"
+        android:fontFamily="@font/aclonica"
+        android:lineSpacingExtra="8sp"
+        android:text="10000"
+        android:textAlignment="center"
+        android:textColor="#481F19"
+        android:textSize="10sp"
+        android:textStyle="bold|italic"
+        android:typeface="sans"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/topToolbar" />
+
+    <LinearLayout
+        android:id="@+id/progressLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/progressText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/aclonica"
+            android:text="SAVING"
+            android:textColor="#FDFDFD"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <ProgressBar
+            android:id="@+id/progressBar3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

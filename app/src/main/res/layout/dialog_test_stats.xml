@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="0dp"
+        android:background="#00FFFFFF"
+        android:scaleType="fitXY"
+        android:src="@drawable/ui_properties_window" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:padding="28dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:fontFamily="@font/aclonica"
+                android:gravity="center"
+                android:text="Test Player Statistics"
+                android:textAlignment="center"
+                android:textColor="#875120"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <!-- Stars -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/aclonica"
+                    android:text="Stars:"
+                    android:textColor="#481F19"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/etStars"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_weight="1"
+                    android:background="@android:color/transparent"
+                    android:fontFamily="@font/aldrich"
+                    android:hint="0"
+                    android:inputType="number"
+                    android:padding="12dp"
+                    android:textColor="#481F19"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <!-- Coins -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/aclonica"
+                    android:text="Coins:"
+                    android:textColor="#481F19"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/etCoins"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_weight="1"
+                    android:background="@android:color/transparent"
+                    android:fontFamily="@font/aldrich"
+                    android:hint="0"
+                    android:inputType="number"
+                    android:padding="12dp"
+                    android:textColor="#481F19"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <!-- Ultra Difficulty Levels Completed -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/aclonica"
+                    android:text="Ultra Levels:"
+                    android:textColor="#481F19"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/etUltraLevels"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_weight="1"
+                    android:background="@android:color/transparent"
+                    android:fontFamily="@font/aldrich"
+                    android:hint="0"
+                    android:inputType="number"
+                    android:padding="12dp"
+                    android:textColor="#481F19"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <!-- Creator Completed Levels -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/aclonica"
+                    android:text="Creator Levels:"
+                    android:textColor="#481F19"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/etCreatorLevels"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_weight="1"
+                    android:background="@android:color/transparent"
+                    android:fontFamily="@font/aldrich"
+                    android:hint="0"
+                    android:inputType="number"
+                    android:padding="12dp"
+                    android:textColor="#481F19"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <!-- Total Profile Likes -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/aclonica"
+                    android:text="Profile Likes:"
+                    android:textColor="#481F19"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/etProfileLikes"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_weight="1"
+                    android:background="@android:color/transparent"
+                    android:fontFamily="@font/aldrich"
+                    android:hint="0"
+                    android:inputType="number"
+                    android:padding="12dp"
+                    android:textColor="#481F19"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <!-- Action Buttons -->
+            <Button
+                android:id="@+id/btnLoadCurrent"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/button_touch_animation"
+                android:clickable="true"
+                android:focusable="true"
+                android:fontFamily="@font/aclonica"
+                android:text="Load Current Stats"
+                android:textColor="#481F19"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/btnSaveToLocal"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/button_touch_animation"
+                android:clickable="true"
+                android:focusable="true"
+                android:fontFamily="@font/aclonica"
+                android:text="Save to Local"
+                android:textColor="#481F19"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/btnClose"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/button_touch_animation"
+                android:clickable="true"
+                android:focusable="true"
+                android:fontFamily="@font/aclonica"
+                android:text="Close"
+                android:textColor="#481F19"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvStatus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="center"
+                android:text=""
+                android:textColor="#875120"
+                android:textSize="14sp"
+                android:visibility="gone" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Close button - placed AFTER ScrollView to ensure it's on top -->
+    <ImageButton
+        android:id="@+id/windowCloseButton"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="0dp"
+        android:background="#00FFFFFF"
+        android:clickable="true"
+        android:focusable="true"
+        android:scaleType="centerInside"
+        android:src="@drawable/ui_close" />
+
+</RelativeLayout>

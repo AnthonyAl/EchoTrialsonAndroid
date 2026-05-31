@@ -1,0 +1,735 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:maxWidth="600dp"
+    android:maxHeight="800dp"
+    android:foregroundGravity="fill_horizontal|fill">
+
+    <ImageView
+        android:id="@+id/background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+        app:srcCompat="@drawable/ui_properties_window" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/body"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/contents"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="32dp"
+            android:gravity="right"
+            android:orientation="vertical"
+            android:padding="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.533">
+
+            <!-- Object Type Header -->
+
+            <TextView
+                android:id="@+id/dialogTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:fontFamily="@font/aclonica"
+                android:gravity="center"
+                android:text="Translate Trigger Properties"
+                android:textColor="#875120"
+                android:textSize="14sp"
+                android:textStyle="bold|italic"
+                android:typeface="sans" />
+
+            <!-- Position Section -->
+
+            <ScrollView
+                android:id="@+id/triggerPropertiesSection"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="16dp"
+                android:fadeScrollbars="false"
+                android:scrollbars="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:id="@+id/delaySection"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/DelayTitle"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="8dp"
+                                android:fontFamily="@font/aclonica"
+                                android:text="Delay"
+                                android:textAlignment="center"
+                                android:textColor="#481F19"
+                                android:textSize="11sp"
+                                android:textStyle="bold|italic"
+                                android:tooltipText="values in ticks"
+                                android:typeface="sans" />
+
+                            <LinearLayout
+                                android:id="@+id/delaySubSection"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_marginBottom="16dp"
+                                android:background="#4A93774F"
+                                android:backgroundTintMode="multiply"
+                                android:orientation="horizontal">
+
+                                <ImageButton
+                                    android:id="@+id/delayDownButton"
+                                    android:layout_width="32dp"
+                                    android:layout_height="32dp"
+                                    android:background="#00FFFFFF"
+                                    android:scaleType="centerInside"
+                                    android:src="@drawable/ui_back"
+                                    tools:src="@drawable/ui_back" />
+
+                                <TextView
+                                    android:id="@+id/delayText"
+                                    android:layout_width="90dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:fontFamily="@font/aclonica"
+                                    android:lineSpacingExtra="8sp"
+                                    android:text="60"
+                                    android:textAlignment="center"
+                                    android:textColor="#481F19"
+                                    android:textSize="14sp"
+                                    android:textStyle="bold"
+                                    android:typeface="sans" />
+
+                                <ImageButton
+                                    android:id="@+id/delayUpButton"
+                                    android:layout_width="32dp"
+                                    android:layout_height="32dp"
+                                    android:background="#00FFFFFF"
+                                    android:scaleType="centerInside"
+                                    android:src="@drawable/ui_forward"
+                                    tools:src="@drawable/ui_forward" />
+
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/speedSection"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/speedTitle"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="8dp"
+                                android:fontFamily="@font/aclonica"
+                                android:text="Speed"
+                                android:textAlignment="center"
+                                android:textColor="#481F19"
+                                android:textSize="12sp"
+                                android:textStyle="bold|italic"
+                                android:tooltipText="values in ticks"
+                                android:typeface="sans" />
+
+                            <LinearLayout
+                                android:id="@+id/speedSubSection"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_marginBottom="16dp"
+                                android:background="#4A93774F"
+                                android:backgroundTintMode="multiply"
+                                android:orientation="horizontal">
+
+                                <ImageButton
+                                    android:id="@+id/speedDownButton"
+                                    android:layout_width="32dp"
+                                    android:layout_height="32dp"
+                                    android:background="#00FFFFFF"
+                                    android:scaleType="centerInside"
+                                    android:src="@drawable/ui_back"
+                                    tools:src="@drawable/ui_back" />
+
+                                <TextView
+                                    android:id="@+id/speedText"
+                                    android:layout_width="90dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:fontFamily="@font/aclonica"
+                                    android:lineSpacingExtra="8sp"
+                                    android:text="60"
+                                    android:textAlignment="center"
+                                    android:textColor="#481F19"
+                                    android:textSize="14sp"
+                                    android:textStyle="bold"
+                                    android:typeface="sans" />
+
+                                <ImageButton
+                                    android:id="@+id/speedUpButton"
+                                    android:layout_width="32dp"
+                                    android:layout_height="32dp"
+                                    android:background="#00FFFFFF"
+                                    android:scaleType="centerInside"
+                                    android:src="@drawable/ui_forward"
+                                    tools:src="@drawable/ui_forward" />
+
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/groupIdSection"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/groupIdTitle"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="8dp"
+                                android:fontFamily="@font/aclonica"
+                                android:text="Group and Target ID"
+                                android:textAlignment="center"
+                                android:textColor="#481F19"
+                                android:textSize="12sp"
+                                android:textStyle="bold|italic"
+                                android:typeface="sans" />
+
+                            <LinearLayout
+                                android:id="@+id/groupIdSubSection"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_marginBottom="16dp"
+                                android:background="#4A93774F"
+                                android:orientation="horizontal">
+
+                                <ImageButton
+                                    android:id="@+id/groupDownButton"
+                                    android:layout_width="32dp"
+                                    android:layout_height="32dp"
+                                    android:background="#00FFFFFF"
+                                    android:scaleType="centerInside"
+                                    android:src="@drawable/ui_back"
+                                    tools:src="@drawable/ui_back" />
+
+                                <TextView
+                                    android:id="@+id/groupIdText"
+                                    android:layout_width="90dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:fontFamily="@font/aclonica"
+                                    android:lineSpacingExtra="8sp"
+                                    android:text="0"
+                                    android:textAlignment="center"
+                                    android:textColor="#481F19"
+                                    android:textSize="14sp"
+                                    android:textStyle="bold"
+                                    android:typeface="sans" />
+
+                                <ImageButton
+                                    android:id="@+id/groupUpButton"
+                                    android:layout_width="32dp"
+                                    android:layout_height="32dp"
+                                    android:background="#00FFFFFF"
+                                    android:scaleType="centerInside"
+                                    android:src="@drawable/ui_forward"
+                                    tools:src="@drawable/ui_forward" />
+
+                            </LinearLayout>
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/triggerBoundsSection"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/triggerBoundsTitle"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="8dp"
+                            android:fontFamily="@font/aclonica"
+                            android:text="Trigger Bounds"
+                            android:textAlignment="center"
+                            android:textColor="#875120"
+                            android:textSize="11sp"
+                            android:textStyle="bold|italic"
+                            android:tooltipText="values in Blocks"
+                            android:typeface="sans" />
+
+                        <LinearLayout
+                            android:id="@+id/triggerBoundsSubSection"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="8dp"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:id="@+id/leftSection"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="5"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/leftTitle"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginBottom="8dp"
+                                    android:fontFamily="@font/aclonica"
+                                    android:text="Left Bound"
+                                    android:textAlignment="center"
+                                    android:textColor="#481F19"
+                                    android:textSize="12sp"
+                                    android:textStyle="bold|italic"
+                                    android:typeface="sans" />
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginBottom="16dp"
+                                    android:background="#4A93774F"
+                                    android:orientation="horizontal">
+
+                                    <ImageButton
+                                        android:id="@+id/leftDownButton"
+                                        android:layout_width="32dp"
+                                        android:layout_height="32dp"
+                                        android:background="#00FFFFFF"
+                                        android:scaleType="centerInside"
+                                        android:src="@drawable/ui_back"
+                                        tools:src="@drawable/ui_back" />
+
+                                    <TextView
+                                        android:id="@+id/leftText"
+                                        android:layout_width="36dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center_vertical"
+                                        android:fadingEdge="horizontal"
+                                        android:fadingEdgeLength="@android:dimen/dialog_min_width_major"
+                                        android:fontFamily="@font/aclonica"
+                                        android:lineSpacingExtra="8sp"
+                                        android:text="1"
+                                        android:textAlignment="center"
+                                        android:textColor="#481F19"
+                                        android:textSize="14sp"
+                                        android:textStyle="bold"
+                                        android:typeface="sans" />
+
+                                    <ImageButton
+                                        android:id="@+id/leftUpButton"
+                                        android:layout_width="32dp"
+                                        android:layout_height="32dp"
+                                        android:background="#00FFFFFF"
+                                        android:scaleType="centerInside"
+                                        android:src="@drawable/ui_forward"
+                                        tools:src="@drawable/ui_forward" />
+
+                                </LinearLayout>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/rightSection"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="5"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/rightTitle"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginBottom="8dp"
+                                    android:fontFamily="@font/aclonica"
+                                    android:text="Right Bound"
+                                    android:textAlignment="center"
+                                    android:textColor="#481F19"
+                                    android:textSize="12sp"
+                                    android:textStyle="bold|italic"
+                                    android:typeface="sans" />
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginBottom="16dp"
+                                    android:background="#4A93774F"
+                                    android:orientation="horizontal">
+
+                                    <ImageButton
+                                        android:id="@+id/rightDownButton"
+                                        android:layout_width="32dp"
+                                        android:layout_height="32dp"
+                                        android:background="#00FFFFFF"
+                                        android:scaleType="centerInside"
+                                        android:src="@drawable/ui_back"
+                                        tools:src="@drawable/ui_back" />
+
+                                    <TextView
+                                        android:id="@+id/rightText"
+                                        android:layout_width="36dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center_vertical"
+                                        android:fadingEdge="horizontal"
+                                        android:fadingEdgeLength="@android:dimen/dialog_min_width_major"
+                                        android:fontFamily="@font/aclonica"
+                                        android:lineSpacingExtra="8sp"
+                                        android:text="1"
+                                        android:textAlignment="center"
+                                        android:textColor="#481F19"
+                                        android:textSize="14sp"
+                                        android:textStyle="bold"
+                                        android:typeface="sans" />
+
+                                    <ImageButton
+                                        android:id="@+id/rightUpButton"
+                                        android:layout_width="32dp"
+                                        android:layout_height="32dp"
+                                        android:background="#00FFFFFF"
+                                        android:scaleType="centerInside"
+                                        android:src="@drawable/ui_forward"
+                                        tools:src="@drawable/ui_forward" />
+
+                                </LinearLayout>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/topSection"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="5"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/topTitle"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginBottom="8dp"
+                                    android:fontFamily="@font/aclonica"
+                                    android:text="Top Bound"
+                                    android:textAlignment="center"
+                                    android:textColor="#481F19"
+                                    android:textSize="12sp"
+                                    android:textStyle="bold|italic"
+                                    android:typeface="sans" />
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginBottom="16dp"
+                                    android:background="#4A93774F"
+                                    android:orientation="horizontal">
+
+                                    <ImageButton
+                                        android:id="@+id/topDownButton"
+                                        android:layout_width="32dp"
+                                        android:layout_height="32dp"
+                                        android:background="#00FFFFFF"
+                                        android:scaleType="centerInside"
+                                        android:src="@drawable/ui_back"
+                                        tools:src="@drawable/ui_back" />
+
+                                    <TextView
+                                        android:id="@+id/topText"
+                                        android:layout_width="36dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center_vertical"
+                                        android:fadingEdge="horizontal"
+                                        android:fadingEdgeLength="@android:dimen/dialog_min_width_major"
+                                        android:fontFamily="@font/aclonica"
+                                        android:lineSpacingExtra="8sp"
+                                        android:text="1"
+                                        android:textAlignment="center"
+                                        android:textColor="#481F19"
+                                        android:textSize="14sp"
+                                        android:textStyle="bold"
+                                        android:typeface="sans" />
+
+                                    <ImageButton
+                                        android:id="@+id/topUpButton"
+                                        android:layout_width="32dp"
+                                        android:layout_height="32dp"
+                                        android:background="#00FFFFFF"
+                                        android:scaleType="centerInside"
+                                        android:src="@drawable/ui_forward"
+                                        tools:src="@drawable/ui_forward" />
+
+                                </LinearLayout>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/bottomSection"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="5"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/downTitle"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginBottom="8dp"
+                                    android:fontFamily="@font/aclonica"
+                                    android:text="Bottom Bound"
+                                    android:textAlignment="center"
+                                    android:textColor="#481F19"
+                                    android:textSize="12sp"
+                                    android:textStyle="bold|italic"
+                                    android:typeface="sans" />
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginBottom="16dp"
+                                    android:background="#4A93774F"
+                                    android:orientation="horizontal">
+
+                                    <ImageButton
+                                        android:id="@+id/bottomDownButton"
+                                        android:layout_width="32dp"
+                                        android:layout_height="32dp"
+                                        android:background="#00FFFFFF"
+                                        android:scaleType="centerInside"
+                                        android:src="@drawable/ui_back"
+                                        tools:src="@drawable/ui_back" />
+
+                                    <TextView
+                                        android:id="@+id/bottomText"
+                                        android:layout_width="36dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center_vertical"
+                                        android:fadingEdge="horizontal"
+                                        android:fadingEdgeLength="@android:dimen/dialog_min_width_major"
+                                        android:fontFamily="@font/aclonica"
+                                        android:lineSpacingExtra="8sp"
+                                        android:text="1"
+                                        android:textAlignment="center"
+                                        android:textColor="#481F19"
+                                        android:textSize="14sp"
+                                        android:textStyle="bold"
+                                        android:typeface="sans" />
+
+                                    <ImageButton
+                                        android:id="@+id/bottomUpButton"
+                                        android:layout_width="32dp"
+                                        android:layout_height="32dp"
+                                        android:background="#00FFFFFF"
+                                        android:scaleType="centerInside"
+                                        android:src="@drawable/ui_forward"
+                                        tools:src="@drawable/ui_forward" />
+
+                                </LinearLayout>
+                            </LinearLayout>
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:id="@+id/blocksSection"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/blocksTitle"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="8dp"
+                                android:fontFamily="@font/aclonica"
+                                android:text="Block count"
+                                android:textAlignment="center"
+                                android:textColor="#481F19"
+                                android:textSize="12sp"
+                                android:textStyle="bold|italic"
+                                android:typeface="sans" />
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="16dp"
+                                android:background="#4A93774F"
+                                android:orientation="horizontal">
+
+                                <ImageButton
+                                    android:id="@+id/blocksDownButton"
+                                    android:layout_width="32dp"
+                                    android:layout_height="32dp"
+                                    android:background="#00FFFFFF"
+                                    android:scaleType="centerInside"
+                                    android:src="@drawable/ui_back"
+                                    tools:src="@drawable/ui_back" />
+
+                                <TextView
+                                    android:id="@+id/blocksText"
+                                    android:layout_width="90dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:fadingEdge="horizontal"
+                                    android:fadingEdgeLength="@android:dimen/dialog_min_width_major"
+                                    android:fontFamily="@font/aclonica"
+                                    android:lineSpacingExtra="8sp"
+                                    android:text="10"
+                                    android:textAlignment="center"
+                                    android:textColor="#481F19"
+                                    android:textSize="14sp"
+                                    android:textStyle="bold"
+                                    android:typeface="sans" />
+
+                                <ImageButton
+                                    android:id="@+id/blocksUpButton"
+                                    android:layout_width="32dp"
+                                    android:layout_height="32dp"
+                                    android:background="#00FFFFFF"
+                                    android:scaleType="centerInside"
+                                    android:src="@drawable/ui_forward"
+                                    tools:src="@drawable/ui_forward" />
+
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/directionSection"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/directionTitle"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="8dp"
+                                android:fontFamily="@font/aclonica"
+                                android:text="Direction of Movement"
+                                android:textAlignment="center"
+                                android:textColor="#481F19"
+                                android:textSize="12sp"
+                                android:textStyle="bold|italic"
+                                android:typeface="sans" />
+
+                            <LinearLayout
+                                android:id="@+id/directionSubSection"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_marginBottom="16dp"
+                                android:background="#4A93774F"
+                                android:backgroundTintMode="multiply"
+                                android:orientation="horizontal">
+
+                                <ImageButton
+                                    android:id="@+id/directionDownButton"
+                                    android:layout_width="32dp"
+                                    android:layout_height="32dp"
+                                    android:background="#00FFFFFF"
+                                    android:scaleType="centerInside"
+                                    android:src="@drawable/ui_back"
+                                    tools:src="@drawable/ui_back" />
+
+                                <TextView
+                                    android:id="@+id/directionText"
+                                    android:layout_width="64dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:fontFamily="@font/aclonica"
+                                    android:lineSpacingExtra="8sp"
+                                    android:text="DOWN"
+                                    android:textAlignment="center"
+                                    android:textColor="#481F19"
+                                    android:textSize="14sp"
+                                    android:textStyle="bold"
+                                    android:typeface="sans" />
+
+                                <ImageButton
+                                    android:id="@+id/directionUpButton"
+                                    android:layout_width="32dp"
+                                    android:layout_height="32dp"
+                                    android:background="#00FFFFFF"
+                                    android:scaleType="centerInside"
+                                    android:src="@drawable/ui_forward"
+                                    tools:src="@drawable/ui_forward" />
+
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/descriptionText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/aclonica"
+                        android:text="Translate the target blocks towards a specified amount upon activation"
+                        android:textAlignment="center"
+                        android:textColor="#875120"
+                        android:textSize="14sp"
+                        android:textStyle="bold|italic"
+                        android:typeface="sans" />
+
+                </LinearLayout>
+
+            </ScrollView>
+
+        </LinearLayout>
+
+        <ImageButton
+            android:id="@+id/confirmButton"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="20dp"
+            android:background="#00FFFFFF"
+            android:scaleType="centerInside"
+            android:src="@drawable/ui_confirm"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:src="@drawable/ui_confirm" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</RelativeLayout>

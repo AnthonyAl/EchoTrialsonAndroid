@@ -1,0 +1,103 @@
+# =============================================================================
+# Echo Trials on Android — public thesis source repository
+#
+# Purpose: share readable source code for paper readers. This is not intended
+# as a turnkey, buildable open-source release. Many paths are excluded on
+# purpose (secrets, local notes, media assets, thesis drafts).
+# =============================================================================
+
+# --- Secrets & cloud configuration ---
+google-services.json
+**/google-services.json
+.env
+.env.*
+*.jks
+*.keystore
+signing.properties
+**/signing.properties
+
+# --- Local machine paths & IDE ---
+local.properties
+**/local.properties
+*.iml
+.idea/
+**/.idea/
+.gradle/
+.gradle-temp/
+.cxx/
+.externalNativeBuild/
+captures/
+
+# --- Build outputs ---
+/build/
+**/build/
+/out/
+
+# --- Thesis drafts, prototypes, and internal notes (published elsewhere) ---
+/documentation/
+chapter1.6.md
+*.md
+!README.md
+!LICENSE.md
+!CHANGELOG.md
+**/TODO*.md
+**/*_DRAFT*
+**/*_NOTES*
+
+# --- Archived / scratch folders (if present) ---
+archive/
+archived/
+_archived/
+_archive/
+prototype/
+prototypes/
+notes/
+scratch/
+
+# --- Debug & log artifacts ---
+app/debug_logs.txt
+**/debug_logs.txt
+*.log
+lint-results*.xml
+lint-results*.html
+
+# --- Personal / local-only root files ---
+AnthonyAl.ico
+EchoTrials.ico
+
+# --- Binary game media (not required for reading source) ---
+**/*.jpg
+**/*.jpeg
+**/*.webp
+**/*.ogg
+**/*.wav
+**/*.mp3
+**/*.aac
+**/*.flac
+**/*.ico
+
+# README / GitHub Pages assets (allow images under docs/)
+**/*.png
+!docs/**/*.png
+**/*.gif
+!docs/**/*.gif
+
+# Drawable, launcher, and font binaries (layouts & values are kept)
+app/src/main/res/drawable/
+app/src/main/res/drawable-*/
+app/src/main/res/mipmap/
+app/src/main/res/mipmap-*/
+app/src/main/res/font/
+
+# Raw resources: keep level XML; exclude audio
+app/src/main/res/raw/*
+!app/src/main/res/raw/
+!app/src/main/res/raw/*.xml
+
+# Optional large asset trees
+app/src/main/assets/
+
+# --- OS junk ---
+.DS_Store
+Thumbs.db
+desktop.ini

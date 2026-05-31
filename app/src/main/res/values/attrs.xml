@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="GroupSelector">
+        <!-- Text styling -->
+        <attr name="groupTextColor" format="color" />
+        <attr name="groupTextSize" format="dimension" />
+        <attr name="groupFontFamily" format="reference" />
+        <attr name="groupTextStyle" format="enum">
+            <enum name="normal" value="0" />
+            <enum name="bold" value="1" />
+            <enum name="italic" value="2" />
+            <enum name="bold_italic" value="3" />
+        </attr>
+        <attr name="groupTextAlignment" format="enum">
+            <enum name="left" value="0" />
+            <enum name="center" value="1" />
+            <enum name="right" value="2" />
+        </attr>
+
+        <!-- Arrow drawables -->
+        <attr name="upArrowDrawable" format="reference" />
+        <attr name="downArrowDrawable" format="reference" />
+
+        <!-- Arrow image scaling -->
+        <attr name="arrowScaleType" format="enum">
+            <enum name="matrix" value="0" />
+            <enum name="fitXY" value="1" />
+            <enum name="fitStart" value="2" />
+            <enum name="fitCenter" value="3" />
+            <enum name="fitEnd" value="4" />
+            <enum name="center" value="5" />
+            <enum name="centerCrop" value="6" />
+            <enum name="centerInside" value="7" />
+        </attr>
+
+        <!-- Arrow box dimensions -->
+        <attr name="arrowBoxWidth" format="dimension" />
+        <attr name="arrowBoxHeight" format="dimension" />
+        <attr name="arrowPadding" format="dimension" />
+
+        <!-- Button styling -->
+        <attr name="buttonBackgroundColor" format="color" />
+        <attr name="buttonPadding" format="dimension" />
+
+        <!-- Text box styling -->
+        <attr name="textBackgroundColor" format="color" />
+        <attr name="textPadding" format="dimension" />
+    </declare-styleable>
+    <declare-styleable name="FullscreenAttrs">
+        <attr name="fullscreenBackgroundColor" format="color" />
+        <attr name="fullscreenTextColor" format="color" />
+    </declare-styleable>
+</resources>

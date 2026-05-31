@@ -1,0 +1,491 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/transparent"
+    android:orientation="vertical">
+
+    <!-- Title -->
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="0dp"
+        android:background="#00FFFFFF"
+        android:scaleType="fitXY"
+        android:src="@drawable/ui_properties_window" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true"
+        android:padding="28dp"
+        android:paddingHorizontal="22dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            android:paddingHorizontal="12dp">
+
+            <TextView
+                android:id="@+id/tvTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:fontFamily="@font/aclonica"
+                android:gravity="center"
+                android:text="Account"
+                android:textAlignment="center"
+                android:textColor="#875120"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <!-- Login Section -->
+            <LinearLayout
+                android:id="@+id/loginSection"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:fontFamily="@font/aclonica"
+                    android:text="Choose Sign In Method"
+                    android:textColor="#875120"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+                <!-- Google Sign In Button -->
+                <Button
+                    android:id="@+id/btnGoogleSignIn"
+                    android:layout_width="match_parent"
+                    android:layout_height="36dp"
+                    android:layout_marginHorizontal="64dp"
+                    android:layout_marginBottom="8dp"
+                    android:background="@drawable/button_touch_animation"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:fontFamily="@font/aclonica"
+                    android:text="Sign in with Google"
+                    android:textAlignment="center"
+                    android:textColor="#481F19"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <!-- Email Sign In Button -->
+                <Button
+                    android:id="@+id/btnEmailSignIn"
+                    android:layout_width="match_parent"
+                    android:layout_height="36dp"
+                    android:layout_marginHorizontal="64dp"
+                    android:layout_marginBottom="8dp"
+                    android:background="@drawable/button_touch_animation"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:fontFamily="@font/aclonica"
+                    android:text="Sign in with Email"
+                    android:textColor="#481F19"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <!-- Email Sign Up Button -->
+                <Button
+                    android:id="@+id/btnEmailSignUp"
+                    android:layout_width="match_parent"
+                    android:layout_height="36dp"
+                    android:layout_marginHorizontal="64dp"
+                    android:layout_marginBottom="16dp"
+                    android:background="@drawable/button_touch_animation"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:fontFamily="@font/aclonica"
+                    android:text="Create New Account"
+                    android:textColor="#481F19"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <!-- Email Sign In Section -->
+            <LinearLayout
+                android:id="@+id/emailSignInSection"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:fontFamily="@font/aclonica"
+                    android:text="Sign In with Email"
+                    android:textColor="#875120"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+                <!-- Email Input -->
+                <EditText
+                    android:id="@+id/etSignInEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginBottom="8dp"
+                    android:background="@android:color/transparent"
+                    android:fontFamily="@font/aldrich"
+                    android:hint="Email"
+                    android:inputType="textEmailAddress"
+                    android:padding="12dp"
+                    android:textColor="#481F19"
+                    android:textSize="12sp" />
+
+                <!-- Password Input -->
+                <EditText
+                    android:id="@+id/etSignInPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginBottom="16dp"
+                    android:background="@android:color/transparent"
+                    android:fontFamily="@font/aldrich"
+                    android:hint="Password"
+                    android:inputType="textPassword"
+                    android:padding="12dp"
+                    android:textColor="#481F19"
+                    android:textSize="12sp" />
+
+                <!-- Sign In Button -->
+                <Button
+                    android:id="@+id/btnConfirmSignIn"
+                    android:layout_width="match_parent"
+                    android:layout_height="36dp"
+                    android:layout_marginHorizontal="64dp"
+                    android:layout_marginBottom="8dp"
+                    android:background="@drawable/button_touch_animation"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:fontFamily="@font/aclonica"
+                    android:text="Sign In"
+                    android:textColor="#481F19"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <!-- Back Button -->
+                <Button
+                    android:id="@+id/btnBackToLogin"
+                    android:layout_width="match_parent"
+                    android:layout_height="36dp"
+                    android:layout_marginHorizontal="64dp"
+                    android:layout_marginBottom="16dp"
+                    android:background="@drawable/button_touch_animation"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:fontFamily="@font/aclonica"
+                    android:text="Back"
+                    android:textColor="#481F19"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <!-- Email Sign Up Section -->
+            <LinearLayout
+                android:id="@+id/emailSignUpSection"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:fontFamily="@font/aclonica"
+                    android:text="Create New Account"
+                    android:textColor="#875120"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+                <!-- Username Input -->
+                <EditText
+                    android:id="@+id/etSignUpUsername"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginBottom="8dp"
+                    android:background="@android:color/transparent"
+                    android:fontFamily="@font/aldrich"
+                    android:hint="Username"
+                    android:inputType="text"
+                    android:maxLength="20"
+                    android:padding="12dp"
+                    android:textColor="#481F19"
+                    android:textSize="12sp" />
+
+                <!-- Email Input -->
+                <EditText
+                    android:id="@+id/etSignUpEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginBottom="8dp"
+                    android:background="@android:color/transparent"
+                    android:fontFamily="@font/aldrich"
+                    android:hint="Email"
+                    android:inputType="textEmailAddress"
+                    android:padding="12dp"
+                    android:textColor="#481F19"
+                    android:textSize="12sp" />
+
+                <!-- Password Input -->
+                <EditText
+                    android:id="@+id/etSignUpPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginBottom="8dp"
+                    android:background="@android:color/transparent"
+                    android:fontFamily="@font/aldrich"
+                    android:hint="Password (min 6 characters)"
+                    android:inputType="textPassword"
+                    android:padding="12dp"
+                    android:textColor="#481F19"
+                    android:textSize="12sp" />
+
+                <!-- Confirm Password Input -->
+                <EditText
+                    android:id="@+id/etSignUpConfirmPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginBottom="16dp"
+                    android:background="@android:color/transparent"
+                    android:fontFamily="@font/aldrich"
+                    android:hint="Confirm Password"
+                    android:inputType="textPassword"
+                    android:padding="12dp"
+                    android:textColor="#481F19"
+                    android:textSize="12sp" />
+
+                <!-- Create Account Button -->
+                <Button
+                    android:id="@+id/btnConfirmSignUp"
+                    android:layout_width="match_parent"
+                    android:layout_height="36dp"
+                    android:layout_marginHorizontal="64dp"
+                    android:layout_marginBottom="8dp"
+                    android:background="@drawable/button_touch_animation"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:fontFamily="@font/aclonica"
+                    android:text="Create Account"
+                    android:textColor="#481F19"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <!-- Back Button -->
+                <Button
+                    android:id="@+id/btnBackToLoginFromSignUp"
+                    android:layout_width="match_parent"
+                    android:layout_height="36dp"
+                    android:layout_marginHorizontal="64dp"
+                    android:layout_marginBottom="16dp"
+                    android:background="@drawable/button_touch_animation"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:fontFamily="@font/aclonica"
+                    android:text="Back"
+                    android:textColor="#481F19"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <!-- Username Setup Section (for Google users) -->
+            <LinearLayout
+                android:id="@+id/usernameSetupSection"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:fontFamily="@font/aclonica"
+                    android:text="Choose Your Username"
+                    android:textColor="#875120"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvUsernameDescription"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp"
+                    android:fontFamily="@font/aldrich"
+                    android:text="This will be your public display name in the game"
+                    android:textColor="#481F19"
+                    android:textSize="12sp" />
+
+                <!-- Username Input -->
+                <EditText
+                    android:id="@+id/etUsername"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginBottom="16dp"
+                    android:background="@android:color/transparent"
+                    android:fontFamily="@font/aldrich"
+                    android:hint="Enter username"
+                    android:inputType="text"
+                    android:maxLength="20"
+                    android:padding="12dp"
+                    android:textColor="#481F19"
+                    android:textSize="12sp" />
+
+                <!-- Confirm Button -->
+                <Button
+                    android:id="@+id/btnConfirm"
+                    android:layout_width="match_parent"
+                    android:layout_height="36dp"
+                    android:layout_marginHorizontal="64dp"
+                    android:layout_marginBottom="16dp"
+                    android:background="@drawable/button_touch_animation"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:fontFamily="@font/aclonica"
+                    android:text="Complete Setup"
+                    android:textColor="#481F19"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/accountInfoSection"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:fontFamily="@font/aclonica"
+                    android:text="Account Info"
+                    android:textColor="#875120"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+                <!-- User Display Name -->
+                <TextView
+                    android:id="@+id/tvUserDisplayName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:padding="8dp"
+                    android:text="Name: Player"
+                    android:textSize="12sp"
+                    android:visibility="visible" />
+
+                <!-- Username Display -->
+                <TextView
+                    android:id="@+id/tvUsername"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:fontFamily="@font/aldrich"
+                    android:padding="8dp"
+                    android:text="Username: Player"
+                    android:textColor="#481F19"
+                    android:textSize="12sp" />
+
+                <!-- User Email Display -->
+                <TextView
+                    android:id="@+id/tvUserEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:fontFamily="@font/aldrich"
+                    android:padding="8dp"
+                    android:text="Email: user@example.com"
+                    android:textColor="#481F19"
+                    android:textSize="12sp" />
+
+                <!-- User ID Display -->
+                <TextView
+                    android:id="@+id/tvUserId"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:fontFamily="@font/aldrich"
+                    android:padding="8dp"
+                    android:text="User ID: abc123..."
+                    android:textColor="#481F19"
+                    android:textSize="12sp" />
+
+                <!-- Sign Out Button -->
+                <Button
+                    android:id="@+id/btnSignOut"
+                    android:layout_width="match_parent"
+                    android:layout_height="36dp"
+                    android:layout_marginHorizontal="64dp"
+                    android:layout_marginBottom="16dp"
+                    android:background="@drawable/button_touch_animation"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:fontFamily="@font/aclonica"
+                    android:text="Sign Out"
+                    android:textColor="#481F19"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:visibility="gone" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Close button - placed AFTER ScrollView to ensure it's on top -->
+    <TextView
+        android:id="@+id/tvErrorMessage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="5dp"
+        android:background="#61FFFFFF"
+        android:fadingEdge="horizontal"
+        android:fontFamily="@font/aldrich"
+        android:gravity="center"
+        android:text="Account creation failed because email already exists"
+        android:textAlignment="center"
+        android:textColor="@color/fire_red"
+        android:textSize="12sp"
+        android:textStyle="bold|italic"
+        android:typeface="sans"
+        android:visibility="gone" />
+
+    <ImageButton
+        android:id="@+id/windowCloseButton"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="0dp"
+        android:background="#00FFFFFF"
+        android:clickable="true"
+        android:focusable="true"
+        android:scaleType="centerInside"
+        android:src="@drawable/ui_close" />
+
+</RelativeLayout>

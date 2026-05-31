@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#DFA95C"
+    android:theme="@style/ThemeOverlay.EchoTrialsOnAndroid.FullscreenContainer"
+    tools:context=".view.MainActivity">
+
+    <!-- The primary full-screen view. This can be replaced with whatever view
+         is needed to present your content, e.g. VideoView, SurfaceView,
+         TextureView, etc. -->
+
+    <!-- This FrameLayout insets its children based on system windows using
+         android:fitsSystemWindows. -->
+    <com.unipi.alexandris.android.echotrialsonandroid.view.GameBackgroundComponent
+        android:id="@+id/gameBackground"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#330D0000">
+
+    </com.unipi.alexandris.android.echotrialsonandroid.view.GameBackgroundComponent>
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+        app:srcCompat="@drawable/ui_walpaper_inverse" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="12dp"
+            android:fitsSystemWindows="true"
+            android:gravity="center"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <!-- Status text at the top -->
+
+            <!-- Main menu buttons in the center -->
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginStart="124dp"
+                android:layout_marginEnd="124dp"
+                android:layout_weight="2"
+                android:scaleType="centerInside"
+                app:srcCompat="@drawable/title" />
+
+            <LinearLayout
+                android:id="@+id/linearLayout3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/profileButton"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="#00FFFFFF"
+                    android:scaleType="centerInside"
+                    app:srcCompat="@drawable/ui_profile" />
+
+                <ImageButton
+                    android:id="@+id/playButton"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:background="#00FFFFFF"
+                    android:scaleType="centerInside"
+                    app:srcCompat="@drawable/ui_play" />
+
+                <ImageButton
+                    android:id="@+id/creatorButton"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="#00FFFFFF"
+                    android:scaleType="centerInside"
+                    app:srcCompat="@drawable/ui_tools" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout2"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:layout_marginStart="192dp"
+                android:layout_marginEnd="192dp"
+                android:background="#00FFFFFF"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/accountButton"
+                    android:layout_width="48dp"
+                    android:layout_height="wrap_content"
+                    android:background="#00FFFFFF"
+                    android:scaleType="fitCenter"
+                    app:srcCompat="@drawable/ui_account" />
+
+                <ImageButton
+                    android:id="@+id/downloadButton"
+                    android:layout_width="48dp"
+                    android:layout_height="wrap_content"
+                    android:background="#00FFFFFF"
+                    android:scaleType="fitCenter"
+                    app:srcCompat="@drawable/ui_download" />
+
+                <ImageButton
+                    android:id="@+id/uploadButton"
+                    android:layout_width="48dp"
+                    android:layout_height="wrap_content"
+                    android:background="#00FFFFFF"
+                    android:scaleType="fitCenter"
+                    app:srcCompat="@drawable/ui_upload" />
+
+                <ImageButton
+                    android:id="@+id/infoButton"
+                    android:layout_width="48dp"
+                    android:layout_height="wrap_content"
+                    android:background="#00FFFFFF"
+                    android:scaleType="fitCenter"
+                    app:srcCompat="@drawable/ui_info" />
+
+                <ImageButton
+                    android:id="@+id/achievementsButton"
+                    android:layout_width="48dp"
+                    android:layout_height="wrap_content"
+                    android:background="#00FFFFFF"
+                    android:scaleType="fitCenter"
+                    app:srcCompat="@drawable/ui_achievements" />
+
+                <ImageButton
+                    android:id="@+id/settingsButton"
+                    android:layout_width="48dp"
+                    android:layout_height="wrap_content"
+                    android:background="#00FFFFFF"
+                    android:scaleType="fitCenter"
+                    app:srcCompat="@drawable/ui_settings" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

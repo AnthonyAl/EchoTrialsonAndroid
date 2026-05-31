@@ -1,0 +1,422 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#481f19"
+    android:theme="@style/ThemeOverlay.EchoTrialsOnAndroid.FullscreenContainer"
+    tools:context=".view.MainActivity">
+
+    <!-- The primary full-screen view. This can be replaced with whatever view
+         is needed to present your content, e.g. VideoView, SurfaceView,
+         TextureView, etc. -->
+
+    <!-- This FrameLayout insets its children based on system windows using
+         android:fitsSystemWindows. -->
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+        app:srcCompat="@drawable/ui_walpaper_inverse" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageButton
+            android:id="@+id/backButton"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_gravity="center_vertical"
+            android:background="#00FFFFFF"
+            android:padding="2dp"
+            android:scaleType="centerInside"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ui_back" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout4"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="12dp"
+            android:fitsSystemWindows="true"
+            android:gravity="center"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0">
+
+            <!-- Status text at the top -->
+
+            <!-- Main menu buttons in the center -->
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="match_parent"
+                android:layout_height="36dp"
+                android:layout_marginStart="124dp"
+                android:layout_marginEnd="124dp"
+                android:scaleType="centerInside"
+                app:srcCompat="@drawable/title_challenge_trials" />
+
+            <HorizontalScrollView
+                android:id="@+id/challengeScrollView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:id="@+id/challengeContentLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/pits"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginHorizontal="70dp"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/pitsTitle"
+                            android:layout_width="256dp"
+                            android:layout_height="64dp"
+                            app:srcCompat="@drawable/title_level_a" />
+
+                        <ImageView
+                            android:id="@+id/pitsImage"
+                            android:layout_width="256dp"
+                            android:layout_height="156dp"
+                            app:srcCompat="@drawable/portal" />
+
+                        <LinearLayout
+                            android:id="@+id/pitsStars"
+                            android:layout_width="256dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginBottom="32dp"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:id="@+id/pitsStar"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                app:srcCompat="@drawable/ui_star_empty" />
+
+                            <ImageView
+                                android:id="@+id/pitsStar1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                app:srcCompat="@drawable/ui_star" />
+
+                            <ImageView
+                                android:id="@+id/pitsStar2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                app:srcCompat="@drawable/ui_star_empty" />
+
+                            <ImageView
+                                android:id="@+id/pitsStar3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                app:srcCompat="@drawable/ui_star_empty" />
+
+                            <ImageView
+                                android:id="@+id/pitsStar4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                app:srcCompat="@drawable/ui_star_empty" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/spikes"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginHorizontal="70dp"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/spikesTitle"
+                            android:layout_width="256dp"
+                            android:layout_height="64dp"
+                            app:srcCompat="@drawable/title_level_b" />
+
+                        <ImageView
+                            android:id="@+id/spikesImage"
+                            android:layout_width="256dp"
+                            android:layout_height="156dp"
+                            app:srcCompat="@drawable/portal" />
+
+                        <LinearLayout
+                            android:id="@+id/spikesStars"
+                            android:layout_width="256dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginBottom="32dp"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:id="@+id/spikesStar"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                app:srcCompat="@drawable/ui_star_empty" />
+
+                            <ImageView
+                                android:id="@+id/spikesStar1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                app:srcCompat="@drawable/ui_star" />
+
+                            <ImageView
+                                android:id="@+id/spikesStar2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                app:srcCompat="@drawable/ui_star_empty" />
+
+                            <ImageView
+                                android:id="@+id/spikesStar3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                app:srcCompat="@drawable/ui_star_empty" />
+
+                            <ImageView
+                                android:id="@+id/spikesStar4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                app:srcCompat="@drawable/ui_star_empty" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/push"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginHorizontal="70dp"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/pushTitle"
+                            android:layout_width="256dp"
+                            android:layout_height="64dp"
+                            app:srcCompat="@drawable/title_level_c" />
+
+                        <ImageView
+                            android:id="@+id/pushImage"
+                            android:layout_width="256dp"
+                            android:layout_height="156dp"
+                            app:srcCompat="@drawable/portal" />
+
+                        <LinearLayout
+                            android:id="@+id/pushStars"
+                            android:layout_width="256dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginBottom="32dp"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:id="@+id/pushStar"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                app:srcCompat="@drawable/ui_star_empty" />
+
+                            <ImageView
+                                android:id="@+id/pushStar1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                app:srcCompat="@drawable/ui_star" />
+
+                            <ImageView
+                                android:id="@+id/pushStar2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                app:srcCompat="@drawable/ui_star_empty" />
+
+                            <ImageView
+                                android:id="@+id/pushStar3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                app:srcCompat="@drawable/ui_star_empty" />
+
+                            <ImageView
+                                android:id="@+id/pushStar4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                app:srcCompat="@drawable/ui_star_empty" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/gravity"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginHorizontal="70dp"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/gravityTitle"
+                            android:layout_width="256dp"
+                            android:layout_height="64dp"
+                            app:srcCompat="@drawable/title_level_d" />
+
+                        <ImageView
+                            android:id="@+id/gravityImage"
+                            android:layout_width="256dp"
+                            android:layout_height="156dp"
+                            app:srcCompat="@drawable/portal" />
+
+                        <LinearLayout
+                            android:id="@+id/gravityStars"
+                            android:layout_width="256dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginBottom="32dp"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:id="@+id/gravityStar"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                app:srcCompat="@drawable/ui_star_empty" />
+
+                            <ImageView
+                                android:id="@+id/gravityStar1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                app:srcCompat="@drawable/ui_star" />
+
+                            <ImageView
+                                android:id="@+id/gravityStar2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                app:srcCompat="@drawable/ui_star_empty" />
+
+                            <ImageView
+                                android:id="@+id/gravityStar3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                app:srcCompat="@drawable/ui_star_empty" />
+
+                            <ImageView
+                                android:id="@+id/gravityStar4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                app:srcCompat="@drawable/ui_star_empty" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/agility"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginHorizontal="70dp"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/agilityTitle"
+                            android:layout_width="256dp"
+                            android:layout_height="64dp"
+                            app:srcCompat="@drawable/title_level_e" />
+
+                        <ImageView
+                            android:id="@+id/agilityImage"
+                            android:layout_width="256dp"
+                            android:layout_height="156dp"
+                            app:srcCompat="@drawable/portal" />
+
+                        <LinearLayout
+                            android:id="@+id/agilityStars"
+                            android:layout_width="256dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginBottom="32dp"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:id="@+id/agilityStar"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                app:srcCompat="@drawable/ui_star_empty" />
+
+                            <ImageView
+                                android:id="@+id/agilityStar1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                app:srcCompat="@drawable/ui_star" />
+
+                            <ImageView
+                                android:id="@+id/agilityStar2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                app:srcCompat="@drawable/ui_star_empty" />
+
+                            <ImageView
+                                android:id="@+id/agilityStar3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                app:srcCompat="@drawable/ui_star_empty" />
+
+                            <ImageView
+                                android:id="@+id/agilityStar4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                app:srcCompat="@drawable/ui_star_empty" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </LinearLayout>
+            </HorizontalScrollView>
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- Loading overlay - initially hidden -->
+    <include
+        android:id="@+id/loadingOverlay"
+        layout="@layout/dialog_fade_black"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+
+</FrameLayout>

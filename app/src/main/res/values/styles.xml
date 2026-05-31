@@ -1,0 +1,28 @@
+<resources>
+    <!-- Base application theme -->
+    <style name="AppTheme" parent="android:Theme.NoTitleBar.Fullscreen">
+        <!-- Customize your theme here -->
+    </style>
+
+    <style name="ButtonTextStyle">
+        <item name="android:textSize">10sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:fontFamily">monospace</item>
+        <item name="android:textColor">#CCCCCC</item>
+    </style>
+
+    <style name="Widget.AppTheme.ActionBar.Fullscreen" parent="Widget.AppCompat.ActionBar">
+        <item name="android:background">@color/black_overlay</item>
+    </style>
+
+    <style name="Widget.AppTheme.ButtonBar.Fullscreen" parent="">
+        <item name="android:background">@color/black_overlay</item>
+        <item name="android:buttonBarStyle">?android:attr/buttonBarStyle</item>
+    </style>
+    
+    <!-- Dialog slide animation style -->
+    <style name="DialogSlideAnimation">
+        <item name="android:windowEnterAnimation">@anim/dialog_slide_in</item>
+        <item name="android:windowExitAnimation">@anim/dialog_slide_out</item>
+    </style>
+</resources> 

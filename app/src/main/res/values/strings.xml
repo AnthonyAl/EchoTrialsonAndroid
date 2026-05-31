@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Echo Trials on Android</string>
+    <string name="btn_slide">SWIPE</string>
+    <string name="btn_color">TINT</string>
+    <string name="btn_save">SAVE</string>
+    <string name="btn_load">LOAD</string>
+    <string name="btn_cancel">BACK</string>
+    <string name="btn_copy">COPY</string>
+    <string name="btn_paste">PASTE</string>
+    <string name="btn_edit">EDIT</string>
+    <string name="btn_delete">DELETE</string>
+    <string name="btn_clear">CLEAR</string>
+    <string name="btn_select">SELECT</string>
+    <string name="btn_undo">UNDO</string>
+    <string name="btn_redo">REDO</string>
+    <string name="slide_info">Slide mode active: Objects will be placed while sliding. Grid movement and properties are disabled.</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+</resources>

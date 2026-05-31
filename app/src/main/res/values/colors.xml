@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Original Colors -->
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="activation_green_tint">#6E0BB614</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="toolbar_background">#333333</color>
+
+    <!-- Basic Colors -->
+    <color name="red">#FFFF0000</color>
+    <color name="green">#FF00FF00</color>
+    <color name="blue">#FF0000FF</color>
+    <color name="yellow">#FFFFFF00</color>
+    <color name="cyan">#FF00FFFF</color>
+    <color name="magenta">#FFFF00FF</color>
+    <color name="orange">#FFFF8000</color>
+    <color name="pink">#FFFFC0CB</color>
+    <color name="brown">#FF8B4513</color>
+    <color name="gray">#FF808080</color>
+    <color name="light_gray">#FFD3D3D3</color>
+    <color name="dark_gray">#FF404040</color>
+
+    <!-- Vibrant Colors -->
+    <color name="vibrant_red">#FFFF1744</color>
+    <color name="vibrant_green">#FF00E676</color>
+    <color name="vibrant_blue">#FF2196F3</color>
+    <color name="vibrant_yellow">#FFFFEB3B</color>
+    <color name="vibrant_orange">#FFFF9800</color>
+    <color name="vibrant_purple">#FF9C27B0</color>
+    <color name="vibrant_pink">#FFE91E63</color>
+    <color name="vibrant_cyan">#FF00BCD4</color>
+    <color name="vibrant_lime">#FFCDDC39</color>
+    <color name="vibrant_indigo">#FF3F51B5</color>
+    <color name="vibrant_teal">#FF009688</color>
+
+    <!-- Pastel Colors -->
+    <color name="pastel_red">#FFFFB3BA</color>
+    <color name="pastel_green">#FFB3FFB3</color>
+    <color name="pastel_blue">#FFB3D9FF</color>
+    <color name="pastel_yellow">#FFFFFFB3</color>
+    <color name="pastel_orange">#FFFFD9B3</color>
+    <color name="pastel_purple">#FFE6B3FF</color>
+    <color name="pastel_pink">#FFFFB3E6</color>
+    <color name="pastel_cyan">#FFB3FFFF</color>
+    <color name="pastel_lime">#FFE6FFB3</color>
+    <color name="pastel_peach">#FFFFE6B3</color>
+    <color name="pastel_lavender">#FFE6E6FF</color>
+
+    <!-- Neon Colors -->
+    <color name="neon_red">#FFFF0066</color>
+    <color name="neon_green">#FF00FF66</color>
+    <color name="neon_blue">#FF0066FF</color>
+    <color name="neon_yellow">#FFFFFF66</color>
+    <color name="neon_orange">#FFFF6600</color>
+    <color name="neon_purple">#FF6600FF</color>
+    <color name="neon_pink">#FFFF0066</color>
+    <color name="neon_cyan">#FF00FFFF</color>
+    <color name="neon_lime">#FF66FF00</color>
+    <color name="neon_magenta">#FFFF00FF</color>
+
+    <!-- Fire Colors -->
+    <color name="fire_red">#FFFF2200</color>
+    <color name="fire_orange">#FFFF6600</color>
+    <color name="fire_yellow">#FFFFCC00</color>
+    <color name="fire_white">#FFFFF5E6</color>
+    <color name="fire_dark_red">#FFCC0000</color>
+    <color name="fire_bright_orange">#FFFF8800</color>
+
+    <!-- Ice Colors -->
+    <color name="ice_blue">#FF00CCFF</color>
+    <color name="ice_cyan">#FF66FFFF</color>
+    <color name="ice_white">#FFF0F8FF</color>
+    <color name="ice_light_blue">#FFB3E6FF</color>
+    <color name="ice_dark_blue">#FF0066CC</color>
+    <color name="ice_crystal">#FFE6F3FF</color>
+
+    <!-- Nature Colors -->
+    <color name="forest_green">#FF228B22</color>
+    <color name="grass_green">#FF7CFC00</color>
+    <color name="leaf_green">#FF32CD32</color>
+    <color name="earth_brown">#FF8B4513</color>
+    <color name="sand_yellow">#FFF4A460</color>
+    <color name="sky_blue">#FF87CEEB</color>
+    <color name="ocean_blue">#FF006994</color>
+    <color name="sunset_orange">#FFFF7F50</color>
+    <color name="sunset_pink">#FFFF69B4</color>
+    <color name="sunset_purple">#FF9370DB</color>
+
+    <!-- Metallic Colors -->
+    <color name="gold">#FFFFD700</color>
+    <color name="silver">#FFC0C0C0</color>
+    <color name="bronze">#FFCD7F32</color>
+    <color name="copper">#FFB87333</color>
+    <color name="platinum">#FFE5E4E2</color>
+    <color name="steel_blue">#FF4682B4</color>
+    <color name="gunmetal">#FF2C3539</color>
+
+    <!-- Rainbow Colors -->
+    <color name="rainbow_red">#FFFF0000</color>
+    <color name="rainbow_orange">#FFFF7F00</color>
+    <color name="rainbow_yellow">#FFFFFF00</color>
+    <color name="rainbow_green">#FF00FF00</color>
+    <color name="rainbow_blue">#FF0000FF</color>
+    <color name="rainbow_indigo">#FF4B0082</color>
+    <color name="rainbow_violet">#FF9400D3</color>
+
+    <!-- Halloween Colors -->
+    <color name="halloween_orange">#FFFF6600</color>
+    <color name="halloween_black">#FF1A1A1A</color>
+    <color name="halloween_purple">#FF800080</color>
+    <color name="halloween_green">#FF00FF00</color>
+    <color name="halloween_red">#FFFF0000</color>
+
+    <!-- Christmas Colors -->
+    <color name="christmas_red">#FFDC143C</color>
+    <color name="christmas_green">#FF228B22</color>
+    <color name="christmas_gold">#FFFFD700</color>
+    <color name="christmas_silver">#FFC0C0C0</color>
+    <color name="christmas_white">#FFFFFAFA</color>
+
+    <!-- Easter Colors -->
+    <color name="easter_pink">#FFFFC0CB</color>
+    <color name="easter_lavender">#FFE6E6FA</color>
+    <color name="easter_mint">#FFF5FFFA</color>
+    <color name="easter_yellow">#FFFFFFE0</color>
+    <color name="easter_blue">#FFE0F6FF</color>
+    <color name="easter_peach">#FFFFE5B4</color>
+
+    <!-- Transparent Variants (for effects) -->
+    <color name="transparent_red">#80FF0000</color>
+    <color name="transparent_green">#8000FF00</color>
+    <color name="transparent_blue">#800000FF</color>
+    <color name="transparent_yellow">#80FFFF00</color>
+    <color name="transparent_orange">#80FF8000</color>
+    <color name="transparent_purple">#80800080</color>
+    <color name="transparent_white">#80FFFFFF</color>
+    <color name="transparent_black">#80000000</color>
+
+    <!-- Special Effect Colors -->
+    <color name="electric_blue">#FF00FFFF</color>
+    <color name="poison_green">#FF00FF00</color>
+    <color name="blood_red">#FF8B0000</color>
+    <color name="shadow_black">#FF1A1A1A</color>
+    <color name="lightning_yellow">#FFFFFF00</color>
+    <color name="magic_purple">#FF800080</color>
+    <color name="heal_green">#FF00FF7F</color>
+    <color name="mana_blue">#FF4169E1</color>
+    <color name="rage_red">#FFFF0000</color>
+    <color name="stealth_dark">#FF2F2F2F</color>
+
+    <!-- Gradient Base Colors -->
+    <color name="gradient_start_red">#FFFF0000</color>
+    <color name="gradient_end_red">#FF8B0000</color>
+    <color name="gradient_start_blue">#FF0000FF</color>
+    <color name="gradient_end_blue">#FF000080</color>
+    <color name="gradient_start_green">#FF00FF00</color>
+    <color name="gradient_end_green">#FF008000</color>
+    <color name="gradient_start_yellow">#FFFFFF00</color>
+    <color name="gradient_end_yellow">#FFFF8000</color>
+    <color name="gradient_start_purple">#FF800080</color>
+    <color name="gradient_end_purple">#FF4B0082</color>
+
+    <!-- Particle System Colors -->
+    <color name="particle_sparkle">#FFFFFFCC</color>
+    <color name="particle_smoke">#FF808080</color>
+    <color name="particle_fire">#FFFF4400</color>
+    <color name="particle_ice">#FF00CCFF</color>
+    <color name="particle_lightning">#FFFFFF66</color>
+    <color name="particle_poison">#FF00FF66</color>
+    <color name="particle_heal">#FF66FF66</color>
+    <color name="particle_magic">#FFCC66FF</color>
+    <color name="particle_explosion">#FFFF6600</color>
+    <color name="particle_trail">#FFCCCCCC</color>
+    <color name="particle_glow">#FFFFFF99</color>
+    <color name="particle_dust">#FFD2B48C</color>
+    <color name="particle_steam">#FFF5F5F5</color>
+    <color name="particle_energy">#FF00FFFF</color>
+    <color name="particle_darkness">#FF2F2F2F</color>
+    <color name="light_blue_600">#FF039BE5</color>
+    <color name="light_blue_900">#FF01579B</color>
+    <color name="light_blue_A200">#FF40C4FF</color>
+    <color name="light_blue_A400">#FF00B0FF</color>
+    <color name="black_overlay">#66000000</color>
+</resources>
