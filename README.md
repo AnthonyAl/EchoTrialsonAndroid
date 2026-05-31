@@ -1,7 +1,8 @@
 # Echo Trials on Android (Automated README)
 
-![Gameplay demo](docs/demo.gif)
-
+<p align="center">
+  <img src="docs/screenshot-menu.png" alt="Main menu" width="504" />
+</p>
 
 > **Academic source repository** — companion code for the thesis *Echo Trials on Android*: a custom 2D platformer and level-creation platform written in **pure Java** for Android, without a commercial game engine.
 
@@ -13,11 +14,6 @@ A future commercial-style release is planned on a proper game engine; this codeb
 
 ## What is Echo Trials?
 
-<p align="center">
-  <img src="docs/screenshot-menu.png" alt="Main menu" width="504" />
-  <img src="docs/screenshot-gameplay.png" alt="Gameplay" width="504" />
-</p>
-
 **Echo Trials** is a landscape 2D platformer inspired by the Spanish indie game *Level Devil*, extended into a broader creative platform:
 
 - **Challenge Trials** — curated official levels grouped into themed sections (Pits, Spikes, Push, Gravity, Movement), each teaching specific mechanics through progressive difficulty.
@@ -26,6 +22,10 @@ A future commercial-style release is planned on a proper game engine; this codeb
 - **Custom engine** — migrated from a JavaFX desktop prototype to Android, then from CPU **Canvas** rendering to **OpenGL ES 2.0** with sprite batching, block unification, and a fixed **60 FPS** game loop.
 
 The project was developed as an undergraduate/postgraduate thesis at the **University of Piraeus** (`com.unipi.alexandris`).
+
+<p align="center">
+  ![Gameplay demo](docs/demo.gif)
+</p>
 
 ---
 
@@ -167,7 +167,7 @@ Source will be released under an permissive license (e.g. **MIT**) on GitHub —
 
 ## Acknowledgements
 
-- Inspired by [*Level Devil*](https://store.steampowered.com/app/2384730/Level_Devil/) (Stygian Owl).
+- Inspired by *Level Devil* (Stygian Owl).
 - Developed as thesis work at the **University of Piraeus**.
 - Original desktop prototype: JavaFX; this repository is the **Android** port and engine rewrite.
 
