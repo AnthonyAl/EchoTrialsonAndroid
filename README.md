@@ -24,7 +24,7 @@ A future commercial-style release is planned on a proper game engine; this codeb
 The project was developed as an undergraduate/postgraduate thesis at the **University of Piraeus** (`com.unipi.alexandris`).
 
 <p align="center">
-  <imf src="docs/demo.gif" alt="Demo" width="504" />
+  <img src="docs/demo.gif" alt="Demo" width="504" />
 </p>
 
 ---
