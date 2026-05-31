@@ -24,7 +24,7 @@ A future commercial-style release is planned on a proper game engine; this codeb
 The project was developed as an undergraduate/postgraduate thesis at the **University of Piraeus** (`com.unipi.alexandris`).
 
 <p align="center">
-  ![Gameplay demo](docs/demo.gif)
+  <img src="docs/demo.gif" alt="Main menu" width="504" />
 </p>
 
 ---
@@ -174,3 +174,5 @@ Source will be released under an permissive license (e.g. **MIT**) on GitHub —
 ---
 
 <p align="center"><i>Echo Trials — thesis proof-of-concept. Code for readers, not a product release.</i></p>
+
+<p align="center"><i>Full Documentation (in Greek): <a href="https://dione.lib.unipi.gr/xmlui/handle/unipi/18316">Video game development with community features in an Android setting</a></i></p>
