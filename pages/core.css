@@ -1,0 +1,635 @@
+﻿body {
+    font-family: "Lato", sans-serif;
+    background-color: #020202;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+.video-fade-in {
+    animation-name: videoFadeIn;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+@keyframes videoFadeIn {
+    from {
+        opacity: 0.6;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Montserrat", sans-serif;
+    margin-top: 0px !important;
+}
+
+.tonius-button-dark {
+    background: linear-gradient(90deg, #FF4500, #FF6347) !important;
+    color: #fff !important;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block;
+    margin-top: 20px;
+    transition: all 0.3s ease;
+}
+
+.tonius-button-dark:hover {
+    background: #FF8C00 !important;
+    color: #fff !important;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(255,69,0,0.4);
+}
+
+.content-section {
+    background-color: #1b1b2e;
+    color: #fff;
+    padding: 50px 20px;
+}
+
+.content-section h2 {
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.content-section p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    text-align: center;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #1b1b2e;
+    color: #fff;
+}
+
+.tonius-white {
+    background: linear-gradient(#b9b9bd, #96969e) !important;
+    color: #000 !important;
+}
+
+.tonius-dark {
+    background-size: cover;
+    color: #fff !important;
+}
+
+.tonius-light {
+    background-image: url("res/tonius-light2.png") !important;
+    background-size: cover !important;
+    color: #000 !important;
+}
+
+.tonius-focus {
+    transform: scale(0.99);
+}
+
+.button {
+    color: #fff;
+}
+
+.nav {
+    background-color: #FF8C00;
+}
+
+.button:hover {
+    color: #fff !important;
+    background-color: #FF4500;
+}
+
+#main, #footer {
+    margin-left: 120px;
+}
+
+@media only screen and (max-width: 1366px) {
+    #main, #footer {
+        margin-left: 0;
+    }
+
+    #profile {
+        width: 95%;
+    }
+}
+
+@media only screen and (max-height: 650px) {
+    .nav a {
+        height: 80px;
+    }
+
+    .shadow {
+        display: none;
+    }
+}
+
+@media only screen and (max-height: 525px) {
+    .nav a {
+        height: 60px;
+    }
+}
+
+@media only screen and (max-height: 425px) {
+    .nav {
+        visibility: hidden;
+    }
+
+    #main, #footer {
+        margin-left: 0;
+    }
+
+    #profile {
+        width: 95%;
+    }
+}
+
+@media only screen and (min-height: 426px) {
+    .nav2 {
+        visibility: hidden;
+    }
+}
+
+/* Keep only these styles */
+html {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    scroll-behavior: smooth;
+}
+
+html::-webkit-scrollbar {
+    display: none;
+}
+
+/* Video and layout styles */
+.parallax-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: -2;
+    overflow: hidden;
+    background: black; /* Initial black background */
+}
+
+.parallax-video video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+    opacity: 0; /* Start with video invisible */
+    animation: videoFadeIn 3s ease-in forwards; /* Fade in animation */
+}
+
+@keyframes videoFadeIn {
+    0% {
+        opacity: 0;
+    }
+    30% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Title section with animation */
+.parallax-content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.parallax-content h1 {
+    font-size: 10em;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-shadow: 
+        0 0 10px rgba(0,0,0,0.5),
+        0 0 20px rgba(255,69,0,0.4),
+        0 0 30px rgba(0,0,0,0.3);
+    animation: titleReveal 4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    letter-spacing: 0.1em;
+}
+
+@keyframes titleReveal {
+    0% {
+        opacity: 0;
+        transform: scale(0.3) translateY(-100px);
+        letter-spacing: 0.5em;
+    }
+    50% {
+        opacity: 0.5;
+        transform: scale(1.4) translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+        letter-spacing: 0.1em;
+    }
+}
+
+/* Content styles without animations */
+.content-wrapper {
+    position: relative;
+    z-index: 1;
+}
+
+.content-section {
+    padding: 50px 20px;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(5px);
+    border-radius: 20px;
+    margin: 30px 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Gallery layout and animations */
+.gallery-item {
+    display: flex;
+    align-items: stretch;
+    margin: 60px auto;
+    min-height: 350px;
+    overflow: hidden;
+    max-width: 80%;
+    justify-content: center;
+    gap: 30px;
+}
+
+.gallery-container {
+    width: 45%;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(8px);
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 1.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.gallery-image, .gallery-text {
+    width: 95%;
+    padding: 25px;
+    background: transparent;
+    border-radius: 15px;
+}
+
+.gallery-image {
+    width: 95%;
+    padding: 0;
+}
+
+.gallery-image img {
+    width: 100%;
+    border-radius: 15px;
+    transition: transform 0.3s ease;
+}
+
+.gallery-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.gallery-text h3 {
+    color: #FF4500;
+    margin-bottom: 15px;
+    font-size: 1.8em;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.gallery-text p {
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.gallery-text .features {
+    margin-top: 15px;
+}
+
+.gallery-text .features li {
+    margin: 8px 0;
+    padding-left: 20px;
+    position: relative;
+}
+
+.gallery-text .features li:before {
+    content: '►';
+    color: #FF4500;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 0.8em;
+}
+
+/* Animation classes */
+.gallery-container.image-container {
+    transform: translateX(-150px);
+}
+
+/* Animation classes */
+.gallery-container.image-container-right {
+    transform: translateX(150px);
+}
+
+.gallery-container.text-container {
+    opacity: 0;
+    transform: none;
+    transition: opacity 1.2s ease;
+}
+
+.gallery-container.image-container.animate {
+    animation: slideIn 0.8s cubic-bezier(0.17, 0.67, 0.83, 0.67) forwards;
+}
+
+.gallery-container.image-container:nth-child(even).animate {
+    animation: slideInRight 0.8s cubic-bezier(0.17, 0.67, 0.83, 0.67) forwards;
+}
+
+.gallery-container.text-container.animate {
+    animation: fadeIn 1s ease-out forwards;
+}
+
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    70% {
+        opacity: 1;
+        transform: translateX(10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+    70% {
+        opacity: 1;
+        transform: translateX(-10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Progress bar with transition */
+.progress-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 15px;
+    background: rgba(0, 0, 0, 0.1);
+    z-index: 9999;
+}
+
+.progress-bar {
+    height: 100%;
+    width: 0%;
+    background: rgba(255, 215, 0, 0.5);
+    transition: width 0.2s ease;
+}
+
+/* Back to top button with transitions */
+.back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    background: rgba(255, 215, 0, 0.8);
+    border-radius: 50%;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    z-index: 9999;
+}
+
+.back-to-top.visible {
+    display: flex;
+}
+
+.back-to-top:hover {
+    background: rgba(255, 215, 0, 1);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+}
+
+.back-to-top i {
+    color: #000;
+    font-size: 24px;
+}
+
+/* Floating buttons container */
+.floating-buttons {
+    position: fixed;
+    bottom: 40px;
+    right: 30px;
+    display: flex;
+    gap: 15px;
+    z-index: 9999;
+}
+
+/* Style for repository button */
+.repo-button {
+    width: 50px;
+    height: 50px;
+    background: rgba(255, 69, 0, 0.8);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    color: #fff;
+    text-decoration: none;
+}
+
+.repo-button:hover {
+    background: rgba(255, 69, 0, 1);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+}
+
+/* Update floating buttons container */
+.floating-buttons {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    display: flex;
+    gap: 15px;
+    z-index: 9999;
+}
+
+/* Add home button styles */
+.home-button {
+    position: fixed;
+    top: 30px;
+    left: 30px;
+    width: 50px;
+    height: 50px;
+    background: rgba(27, 27, 46, 0.8);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    color: #fff;
+    text-decoration: none;
+    z-index: 9999;
+}
+
+.home-button:hover {
+    background: rgba(27, 27, 46, 1);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+}
+
+.home-button img {
+    width: 30px;
+    height: 30px;
+}
+
+/* Update GitHub section styles */
+#github {
+    text-align: center;
+}
+
+.github-box {
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 15px;
+    padding: 25px;
+    margin: 20px 0;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+#github ul {
+    list-style: none;
+    padding: 0;
+    margin: 15px 0;
+}
+
+#github li {
+    margin: 10px 0;
+}
+
+/* Update home button container */
+.top-buttons {
+    position: fixed;
+    top: 30px;
+    left: 30px;
+    display: flex;
+    gap: 15px;
+    z-index: 9999;
+}
+
+/* Update repo button style */
+.repo-button {
+    width: 50px;
+    height: 50px;
+    background: rgba(255, 69, 0, 0.8);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    color: #fff;
+    text-decoration: none;
+    margin-left: 75px; /* 50px * 1.5 */
+}
+
+/* Remove repo button from floating buttons */
+.floating-buttons {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 9999;
+}
+
+/* Update gallery container styles */
+.gallery-container {
+    width: 45%;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(8px);
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 1.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* Image containers slide from sides */
+.gallery-container.image-container {
+    transform: translateX(-150px);
+}
+
+.gallery-container.image-container:nth-child(even) {
+    transform: translateX(150px);
+}
+
+/* When visible */
+.gallery-container.visible {
+    opacity: 1;
+    transform: translateY(0) translateX(0);
+}
+
+/* Remove any text-specific transform animations */
+.gallery-container.text-container.visible {
+    transform: none;
+}

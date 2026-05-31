@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Echo Trials: Android Edition</title>
+        <meta charset="UTF-8">
+        <link rel="icon" href="res/EchoTrials.ico" type="image/x-icon">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <link rel="stylesheet" href="core.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+        
+        <style>
+            @media screen and (max-width: 768px) {
+                .gallery-item {
+                    display: flex !important;
+                    flex-direction: column !important;
+                    gap: 20px !important;
+                    margin-bottom: 40px !important;
+                }
+
+                .gallery-container {
+                    width: 100% !important;
+                    padding: 0 15px !important;
+                    box-sizing: border-box !important;
+                }
+
+                .image-container, .image-container-right {
+                    order: -1 !important; 
+                }
+
+                .swiper.mySwiper {
+                    width: 100% !important;
+                    aspect-ratio: 16 / 9 !important;
+                    height: auto !important;
+                }
+
+                .parallax-content h1 {
+                    font-size: 12vw !important;
+                }
+            }
+        </style>
+    </head>
+    <body>
+
+        <div class="parallax-video video-fade-in">
+            <video autoplay muted loop playsinline>
+                <source src="res/Echo%20Trials.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+
+        <div class="parallax-content">
+            <h1>ECHO TRIALS</h1>
+            <p style="color: white; font-family: 'Courier New'; font-size: 2.2rem; letter-spacing: 2px;">ANDROID THESIS PROJECT</p>
+        </div>
+
+        <div class="content-wrapper">
+            <div class="content-section" id="about">
+                <h2>About Echo Trials</h2>
+                <p>
+                    Echo Trials is a custom 2D platformer and level-creation platform developed entirely in pure Java for Android, without the use of a commercial game engine. Designed as an academic proof-of-concept for the University of Piraeus, it serves as both a challenging game and a robust creative tool.
+                </p>
+                <p>
+                    The game challenges players through curated "Challenge Trials" that teach specific mechanics through progressive difficulty. Once players master the basics, they can dive into the Visual Level Creator to build their own gauntlets, sharing them globally through a cloud-backed catalogue.
+                </p>
+            </div>
+
+            <div class="content-section" id="gallery">
+                <h2>Features & Engine</h2>
+                <p>Explore the architecture and tools of Echo Trials</p>
+
+                <div class="gallery-item">
+                    <div class="gallery-container image-container">
+                        <div class="swiper mySwiper" style="border-radius: 0.5%;">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="swiper-zoom-container">
+                                        <div class="gallery-image">
+                                            <img src="res/a2.png" alt="OpenGL Engine Gameplay">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gallery-container text-container">
+                        <div class="gallery-text">
+                            <h3>Custom OpenGL ES 2.0 Engine</h3>
+                            <p>Migrated from a JavaFX desktop prototype, the Android version features a fully handwritten rendering pipeline. By implementing sprite batching and block unification, the engine reduces collision objects by ~98.5% and maintains a stable 60 FPS game loop on target devices.</p>
+                            <ul class="features">
+                                <li>Custom OpenGL ES 2.0 rendering</li>
+                                <li>Batched draw calls for high performance</li>
+                                <li>Fixed 60 FPS physics and game loop</li>
+                                <li>Zero commercial engine dependencies</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <div class="gallery-container text-container">
+                        <div class="gallery-text">
+                            <h3>Visual Level Creator</h3>
+                            <p>A comprehensive grid-based editor built directly into the Android app. It features an advanced trigger system allowing designers to manipulate translation, scaling, gravity, fading, and movement. Users can create deeply interactive levels without writing a single line of code.</p>
+                            <ul class="features">
+                                <li>On-device grid-based editing</li>
+                                <li>Advanced trigger property dialogs</li>
+                                <li>Custom XML level serialization</li>
+                                <li>No coding required for logic design</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="gallery-container image-container-right">
+                        <div class="swiper mySwiper" style="border-radius: 0.5%;">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="swiper-zoom-container">
+                                        <div class="gallery-image">
+                                            <img src="res/a4.png" alt="Level Creator UI">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <div class="gallery-container image-container">
+                        <div class="swiper mySwiper" style="border-radius: 0.5%;">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="swiper-zoom-container">
+                                        <div class="gallery-image">
+                                            <img src="res/a8.png" alt="Community Levels">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gallery-container text-container">
+                        <div class="gallery-text">
+                            <h3>Community Trials & Cloud</h3>
+                            <p>Echo Trials extends beyond a solo experience with a fully integrated cloud backend. Powered by Firebase, players can browse, favourite, and share their custom creations globally. Player statistics are secured locally using AES-256 encryption.</p>
+                            <ul class="features">
+                                <li>Firebase Auth & Firestore integration</li>
+                                <li>Global level sharing and downloading</li>
+                                <li>Encrypted local player statistics</li>
+                                <li>Google Sign-In session management</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-section" id="mechanics">
+                <h2>Game Mechanics</h2>
+                <p>
+                    Players control a tall figure capable of navigating landscape environments via moving, jumping, and wall-jumping. The physics engine strictly allows only one wall jump before requiring ground contact.
+                </p>
+                <p>
+                    The curated "Challenge Trials" are grouped into themed sections (Pits, Spikes, Push, Gravity, Movement). Players must adapt to dynamic obstacles, gravity inversions, and frozen surfaces that disrupt input, all rendered smoothly through the custom object handler and physics loop.
+                </p>
+            </div>
+
+            <div class="content-section" id="github">
+                <h2>About the Thesis</h2>
+                <div class="github-box">
+                    <p>Echo Trials is an academic proof-of-concept developed at the University of Piraeus, featuring:</p>
+                    <ul>
+                        <li>Pure Java 11 codebase for Android (API 27–34)</li>
+                        <li>Custom OpenGL ES 2.0 graphics pipeline</li>
+                        <li>Advanced object-oriented design patterns</li>
+                        <li>Efficient game state and memory management</li>
+                        <li>Performance analysis vs Canvas rendering (20–100x fewer draw calls)</li>
+                    </ul>
+                </div>
+                <div class="github-box">
+                    <p>This repository exists for research transparency so readers of the published paper can browse the real implementation alongside the formal write-up. It is not currently maintained as a shippable product.</p>
+                </div>
+            </div>
+
+            <footer class="content-section" id="contact">
+                <h2>Contact</h2>
+                <p>You can read more on: <a href="https://dione.lib.unipi.gr/xmlui/handle/unipi/18316">Video game development with community features in an Android setting</a></p>
+            </footer>
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        <script>
+            // Enhanced Swiper configuration
+            new Swiper(".mySwiper", {
+                zoom: true,
+                grabCursor: true,
+                spaceBetween: 30,
+                initialSlide: 0,
+                effect: "fade",
+                fadeEffect: {
+                    crossFade: true
+                },
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true,
+                },
+                autoplay: {
+                    delay: 3000,
+                    disableOnInteraction: false,
+                },
+            });
+        </script>
+
+        <div class="progress-container">
+            <div class="progress-bar"></div>
+        </div>
+
+        <div class="top-buttons">
+            <a href="https://anthonyal.github.io/" class="home-button" title="Go to Main Site">
+                <img src="res/AnthonyAl.ico" alt="Home">
+            </a>
+            <a href="https://github.com/AnthonyAl/EchoTrialsonAndroid" class="repo-button" title="View Repository">
+                <i class="fa fa-github" style="font-size: 24px;"></i>
+            </a>
+        </div>
+
+        <div class="floating-buttons">
+            <div class="back-to-top">
+                <i class="fa fa-arrow-up"></i>
+            </div>
+        </div>
+
+        <script>
+            // Progress bar functionality
+            window.addEventListener('scroll', () => {
+                const winScroll = document.documentElement.scrollTop || document.body.scrollTop;
+                const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+                const scrolled = (winScroll / height) * 100;
+                document.querySelector('.progress-bar').style.width = scrolled + '%';
+
+                // Show/hide back to top button
+                const backToTop = document.querySelector('.back-to-top');
+                if (winScroll > 300) {
+                    backToTop.classList.add('visible');
+                } else {
+                    backToTop.classList.remove('visible');
+                }
+            });
+
+            // Back to top functionality
+            document.querySelector('.back-to-top').addEventListener('click', () => {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+
+            // Intersection Observer for gallery animations
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    } else {
+                        entry.target.classList.remove('visible');
+                    }
+                });
+            }, {
+                threshold: 0.3,
+                rootMargin: '-100px'
+            });
+
+            document.querySelectorAll('.gallery-container').forEach((element) => {
+                observer.observe(element);
+            });
+
+            // Ensure video only fades in once
+            if (!sessionStorage.getItem('videoPlayed')) {
+                sessionStorage.setItem('videoPlayed', 'true');
+            } else {
+                document.querySelector('.parallax-video video').style.opacity = '1';
+                document.querySelector('.parallax-video video').style.animation = 'none';
+            }
+        </script>
+    </body>
+</html>
