@@ -174,3 +174,5 @@ Source will be released under an permissive license (e.g. **MIT**) on GitHub —
 ---
 
 <p align="center"><i>Echo Trials — thesis proof-of-concept. Code for readers, not a product release.</i></p>
+
+<p align="center"><i>Full Documentation (in Greek): <a href="https://dione.lib.unipi.gr/xmlui/handle/unipi/18316">Video game development with community features in an Android setting</a></i></p>
